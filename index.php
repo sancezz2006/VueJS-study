@@ -8,16 +8,18 @@
 </head>
 <body>
 <div id="app">
-<h1>{{ message }}</h1>
+    <h1>{{ message }}</h1>
+    <input type="text" v-model="message">
+    <pre>{{ $data | json }}</pre>
 </div>
 
 <script>
-    var data = {
-        message:"Hello world"
-    }
+
     new Vue({
         el:"#app",
-    data: data
+    data: {
+        message:"Hello world"
+    }
     })
 
 </script>
