@@ -19,6 +19,7 @@
         el:"#app",
     data: data
     })
+
 </script>
 </body>
 </html>
