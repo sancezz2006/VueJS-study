@@ -8,7 +8,12 @@
 </head>
 <body>
 <div id="app">
-    <button v-on:click="onClick">Нажать тут</button>
+    <form action="">
+    <button v-on:click.prevent="onClick">Нажать тут</button>
+    </form>
+<br />
+    //понажатию Enter, выводим текст сообщения в консоль
+    <input type="text" v-model="message" v-on:keyup.13="onClick">
 
 </div>
 
@@ -16,9 +21,12 @@
 
     new Vue({
         el:"#app",
+        data:{
+            message:''
+        },
         methods:{
             onClick: function(){
-                console.log("it's work!!!");
+                console.log(this.message);
             }
         }
     })
