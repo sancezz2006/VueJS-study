@@ -9,7 +9,8 @@
 <body>
 <div id="app">
     <button v-on:click="show = !show">Press</button>
-    <div class="index4_rectangle" v-show="show"></div>
+    <div class="index4_rectangle" v-if="show"></div>
+    <div v-else>Пусто</div>
 
 </div>
 
